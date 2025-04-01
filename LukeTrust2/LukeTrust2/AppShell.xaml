@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LukeTrust2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LukeTrust2"
+    xmlns:page="clr-namespace:LukeTrust2.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarForegroundColor="ForestGreen"
+    Shell.TabBarBackgroundColor="Gray"
+    Shell.NavBarHasShadow="True"
+    Title="LukeTrust">
+    <Shell.FlyoutHeader>
+        <Grid ColumnDefinitions="Auto, *" Padding="25">
+            <Image Grid.Column="0"
+                   Source="download.png"
+                   Aspect="AspectFill"
+                   HeightRequest="50"
+                   WidthRequest="50"
+                   BackgroundColor="Forestgreen"/>
+            <Label Grid.Column="1"
+                   Text="LukeTrust"
+                   VerticalTextAlignment="Justify"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Forestgreen"
+                   BackgroundColor="AliceBlue"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+    Title="loading"
+    Icon="home.png"
+    ContentTemplate="{DataTemplate page:LoadingPage}"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutItemIsVisible="False"
+    Route="LoadingPage" />
+
+    <ShellContent
+    Title="Login"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutItemIsVisible="False"
+    Icon="login.png"
+    ContentTemplate="{DataTemplate page:LoginPage}"
+    Route="LoginPage" />
+    
+<TabBar FlyoutDisplayOptions="AsMultipleItems">
+    <ShellContent
+    Title="Home"
+    Icon="home.png"
+    ContentTemplate="{DataTemplate page:Home}"
+    Route="Home" />
+
+    <ShellContent
+    Title="Dialects"
+    Icon="language.png"
+    ContentTemplate="{DataTemplate page:Dialects}"
+    Route="Dialects" />
+
+    <ShellContent
+    Title="Profile"
+    Icon="profile.png"
+    ContentTemplate="{DataTemplate page:Profile}"
+    Route="Profile" />
+</TabBar>
+
+    <!--<TabBar>
+        <ShellContent
+     Title="Home"
+     Icon="home.png"
+     ContentTemplate="{DataTemplate page:Home}"
+     Route="Home" />
+
+        <ShellContent
+ Title="Dialects"
+ Icon="language.png"
+ ContentTemplate="{DataTemplate page:Dialects}"
+ Route="Dialects" />
+
+        <ShellContent
+ Title="Me"
+ Icon="profile.png"
+ ContentTemplate="{DataTemplate page:Profile}"
+ Route="Profile" />
+
+    </TabBar>-->
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout HeightRequest="50">
+            <Label Text="Copyright 2021 | LukeTrust 1.0" HorizontalTextAlignment="Center" 
+                   TextColor="White"
+                   BackgroundColor="Forestgreen">
+            </Label>
+            
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+
+</Shell>

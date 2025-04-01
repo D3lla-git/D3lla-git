@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LukeTrust2.Pages.Home"
+             Title="Home">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to LukeTrust"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <SearchBar
+         HorizontalOptions="Center"
+         HeightRequest="50"
+           CancelButtonColor="Red"
+            TextColor="Black"
+            BackgroundColor="lightgreen"
+            Placeholder="Search LukeTrust..."
+         WidthRequest="200">
+
+        </SearchBar>
+    </VerticalStackLayout>
+</ContentPage>

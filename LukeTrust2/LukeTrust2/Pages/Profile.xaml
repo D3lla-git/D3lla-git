@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LukeTrust2.Pages.Profile"
+             Title="Profile">
+    <VerticalStackLayout Padding="25"
+                         Spacing="25">
+        <Label 
+            Text="profile"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Log-Out"
+                Clicked="Button_Clicked"
+                WidthRequest="280"/>
+    </VerticalStackLayout>
+</ContentPage>
